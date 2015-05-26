@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700italic,400italic,700' rel='stylesheet' type='text/css'>
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <title>Buttons to Content</title>
+        <style>
+            body{margin: 0; padding: 0; list-style: none; font-family: 'Noto Sans', sans-serif;}
+            .button{
+                margin: 20px;
+                width: 200px;
+                height: 40px;
+                background: #43BDFF;
+                text-align: center;
+                padding-top: 20px;
+                color: #fff;
+                border-radius: 12px;
+                cursor: pointer;
+				float: left;
+            }
+            #content{
+				padding: 20px;
+				text-align: left;
+			}
+        
+        </style>
+    </head>
+
+    <body>
+	<div class="row">
+        <div class="button" id="button1">Button 1</div>
+		<div class="button" id="button2">Button 2</div>
+		<div class="button" id="button3">Button 3</div>
+		<div class="button" id="button4">Button 4</div>
+		<div class="button" id="button5">Button 5</div>
+	</div>
+        
+        <script>
+            $(document).ready(function(){		
+			var extended1 = false;
+			var extended2 = false;
+			var extended3 = false;
+			var extended4 = false;
+			var extended5 = false;
+			
+                $('.button').mouseover(function(){
+                    $(this).css('background','#4390FF');
+					$(this).css('transition','background 500ms ease-in');
+                });
+				
+                $('#button1').mouseup(function(){
+				
+					if (extended1==true){
+						$(this).css('background','#43BDFF');
+						$(this).animate({width:'200px'});
+						$(this).animate({height:'40px'});
+						$(this).html('Button');
+						$(this).css('transition','width height 500ms ease-in');
+						extended1=false;
+					} 
+					else if(extended1==false){
+						$(this).css('background','#4390FF');
+						$(this).animate({width:'350px'});
+						$(this).animate({height:'350px'});
+						$(this).css('transition','width height 500ms ease-in');
+						$(this).html('Headline <div id="content">Content: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris  nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit voluptate Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio</div>');
+						extended1=true;
+					};
+				});
+				
+				$('#button2').mouseup(function(){
+				
+					if (extended2==true){
+						$(this).css('background','#43BDFF');
+						$(this).animate({width:'200px'});
+						$(this).animate({height:'40px'});
+						$(this).html('Button');
+						$(this).css('transition','width height 500ms ease-in');
+						extended2=false;
+					} 
+					else if(extended2==false){
+						$(this).css('background','#4390FF');
+						$(this).animate({width:'350px'});
+						$(this).animate({height:'280px'});
+						$(this).css('transition','width height 500ms ease-in');
+						$(this).html('Headline <div id="content">Content: ad minim veniam, quis nostrud exercitation ullamco laboris  nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit voluptate Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio</div>');
+						extended2=true;
+					};
+				});
+				
+			    $('#button3').mouseup(function(){
+				
+					if (extended3==true){
+						$(this).css('background','#43BDFF');
+						$(this).animate({width:'200px'});
+						$(this).animate({height:'40px'});
+						$(this).html('Button');
+						$(this).css('transition','width height 500ms ease-in');
+						extended3=false;
+					} 
+					else if(extended3==false){
+						$(this).css('background','#4390FF');
+						$(this).animate({width:'350px'});
+						$(this).animate({height:'320px'});
+						$(this).css('transition','width height 500ms ease-in');
+						$(this).html('Headline <div id="content">Content: elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris  nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit voluptate Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio</div>');
+						extended3=true;
+					};
+				});
+				
+				$('#button4').mouseup(function(){
+				
+					if (extended4==true){
+						$(this).css('background','#43BDFF');
+						$(this).animate({width:'200px'});
+						$(this).animate({height:'40px'});
+						$(this).html('Button');
+						$(this).css('transition','width height 500ms ease-in');
+						extended4=false;
+					} 
+					else if(extended4==false){
+						$(this).css('background','#4390FF');
+						$(this).animate({width:'350px'});
+						$(this).animate({height:'180px'});
+						$(this).css('transition','width height 500ms ease-in');
+						$(this).html('Headline <div id="content">Content: ure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio</div>');
+						extended4=true;
+					};
+				});
+				
+				$('#button5').mouseup(function(){
+					if (extended5==true){
+						$(this).css('background','#43BDFF');
+						$(this).animate({width:'200px'});
+						$(this).animate({height:'40px'});
+						$(this).html('Button');
+						$(this).css('transition','width height 500ms ease-in');
+						extended5=false;
+					} 
+					else if(extended5==false){
+						$(this).css('background','#4390FF');
+						$(this).animate({width:'350px'});
+						$(this).animate({height:'350px'});
+						$(this).css('transition','width height 500ms ease-in');
+						$(this).html('Headline <div id="content">Content: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris  nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit voluptate Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio</div>');
+						extended5=true;
+					};
+				});
+				
+                $('.button').mouseout(function(){
+                    $(this).css('background','#43BDFF');
+                });
+            });
+    
+        </script>
+    </body>
+</html> 
