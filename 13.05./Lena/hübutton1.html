@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html" http-equiv="content-type" charset="utf-8" />
+
+        <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+
+        <title>HüButton1</title>
+
+        <style>
+
+        body{
+        	font-family: 'Noto Sans', sans-serif;
+        	font-size:9px;
+        }
+
+
+
+        .search{
+        	width:200px;
+        	height:90px;
+        	background:orange;
+        	margin: 0 auto;
+        	text-align:center;
+        	color:white;
+        	margin-top:50px;
+        	padding-top: 10px;
+        	border-radius:50px;
+        }
+
+
+        .search:hover{
+        	cursor:pointer;
+        	background:white;
+        	-webkit-transition: background 500ms ease-in; /* Safari */
+            transition: background 500ms ease-in;
+
+        }
+
+        .boxforsearch input{
+            text-decoration:none;
+            color:black;
+            font-size: 14px;
+            border:none;
+            background: none;
+            border-bottom: solid black 1px;
+        }
+
+        .boxforsearch input:first-child{
+            border-bottom: none;
+        }
+
+
+        </style>
+
+
+
+        <script>
+
+
+
+        </script>
+
+     
+
+    </head>
+    <body>
+
+
+<div class="search">
+
+            <form name="googlesearch" action="http://www.google.at/search" method="get">
+
+                <div class="boxforsearch">
+
+                    <input type="submit" value="search"/>
+                    <input type="text" name="q"/>
+
+                </div>
+
+            </form>
+
+</div>
+
+
+    </body>
+</html>

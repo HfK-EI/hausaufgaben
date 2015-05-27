@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta content="text/html" http-equiv="content-type" charset="utf-8" />
+        <script src="http://code.jquery.com/jquery-2.1.3.min.js"> </script>
+
+        <title>hübutton2</title>
+
+
+        <style>
+
+            #box {
+                position: absolute;
+                top: 50px;
+                left: 50px; 
+                padding: 10px;
+                border-radius: 20px;
+            }
+            
+            .look{
+                font: bold 15px verdana, sans-serif;
+                color: white;
+                background-color: gray;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="look" id="box">
+            INFOBOX
+            <div class="look" id="info">
+                </br>
+            Hier steht die Info :)
+            </br>
+            bla bla bla bla bla
+            </br>
+            bling bling bling
+            </div>
+        </div>
+    
+        <script>
+            
+            $(document).ready(function(e){
+        
+                $('#info').fadeOut(0);
+
+                    $('#box').mouseover(function(e){
+                        $('#box').animate({
+                            width: '200px',
+                            height: '100px',},150);
+                    
+                        $('.look').css({backgroundColor: '#dba575'});
+                        $('#info').fadeIn(150);
+                    });
+                
+                    $('#box').mouseleave(function(e){
+                        $('#box').animate({
+                            width: '79px',
+                            height: '18px',},150);
+                    
+                        $('.look').css({backgroundColor: 'gray'});
+                        $('#info').fadeOut(0);
+                    });
+            });
+        
+        </script>
+
+    </body>
+
+</html>
