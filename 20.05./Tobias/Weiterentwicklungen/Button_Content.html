@@ -7,7 +7,7 @@
         <title>Button to Content</title>
         <style>
             body{margin: 0; padding: 0; list-style: none; font-family: 'Noto Sans', sans-serif;}
-            #button{
+            .button {
                 margin: 0 auto;
                 width: 200px;
                 height: 40px;
@@ -19,49 +19,49 @@
                 border-radius: 12px;
                 cursor: pointer;
             }
-            #content{
+            .button--active {
+                -webkit-transition: background .5s, height .5s, width .5s .5s;
+                        transition: background .5s, height .5s, width .5s .5s;
+                
+            }
+            .button--inactive {
+                -webkit-transition: background .5s, width .5s, height .5s .5s;
+                        transition: background .5s, width .5s, height .5s .5s;
+            }
+
+            .button:hover {
+                background: #4390FF;
+            }
+            #content {
 				padding: 20px;
 				text-align: left;
+                position: relative;
 			}
         
         </style>
     </head>
 
     <body>
-        <div id="button">PRESS</div>
+        <div class="button button--inactive">PRESS</div>
         
         <script>
             $(document).ready(function(){		
 			var extended = false;
-			
-                $('#button').mouseover(function(){
-                    $(this).css('background','#4390FF');
-					$(this).css('transition','background 500ms ease-in');
-                });
 				
-                $('#button').mouseup(function(){
+                $('.button').click(function(){
 				
-					if (extended==true){
-						$(this).css('background','#43BDFF');
-						$(this).animate({width:'200px'});
-						$(this).animate({height:'40px'});
-						$(this).html('PRESS');
-						$(this).css('transition','width height 500ms ease-in');
-						extended=false;
+					if (extended === true){
+                        $(this).removeClass('button--inactive').addClass('button--active');
+                        $(this).css({height:'40px', width:'200px'});
+						extended = false;
 					} 
-					else if(extended==false){
-						$(this).css('background','#4390FF');
-						$(this).animate({width:'350px'});
-						$(this).animate({height:'350px'});
-						$(this).css('transition','width height 500ms ease-in');
+					else if(extended === false){
+                        $(this).removeClass('button--active').addClass('button--inactive');
+						$(this).css({width:'350px', height:'350px'});
 						$(this).html('Headline <div id="content">Content: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris  nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit voluptate Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio</div>');
-						extended=true;
+						extended = true;
 					};
 				});
-				
-                $('#button').mouseout(function(){
-                    $(this).css('background','#43BDFF');
-                });
             })
     
         </script>
